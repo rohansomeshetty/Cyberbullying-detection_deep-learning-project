@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %} 
+<font size="+1" color="red">{{msg}}
+<center>
+</font>
+<h2>User  Registration</h2>
+<br>
+
+<br><form method="post" action="/u_signup/">
+	{% csrf_token %} 
+<table>
+                    <tr><td><input class="form-control"  type="text" name="n_a_m_e" placeholder="Name" required="required"   size="50"  ></input><br></td></tr>
+                    <tr><td><input class="form-control"  type="e_mail" name="mail" placeholder="Email, example@example.com" required="required"   size="50"  onblur="validate1()"></input><br></td></tr>
+                    <tr><td><input class="form-control"  type="text" name="phone" placeholder="Phone" required="required"  size="50"   onblur="validate3()"></input><br></td></tr>
+                    <tr><td><input class="form-control"  type="Password" name="pass_word" placeholder="Password" required="required"   size="50"   onblur="validate5()"></input><br></td></tr>
+
+                    <tr><td>
+					<select name="gen"class="form-control" width="100%">
+						<option value="male" selected>Male
+						<option value="female">Female
+					</select><br>
+
+                    <tr><td>Profile Pic<input class="form-control"  type="file" name="picture" placeholder="profile Pic" required="required"  size="50"   onblur="validate3()" accept="image/jpg,  image/jpeg" ></input><br></td></tr>
+
+					<tr><td><br><input type="submit" class="form-control" value="Register"  size="50"  >
+                
+</table>
+</form>
+
+{% endblock %}

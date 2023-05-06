@@ -1,0 +1,35 @@
+{% extends 'base_a.html' %}
+
+{% block content %} 
+
+
+<h3>
+	
+{{msg}}
+	
+	<h3>
+	View Performance Metrics<br><br>
+</h2>
+</h3>
+<center>
+				<table id="tab" width="65%">
+<tr>
+	<th width="10%">Sno<th><center>Algorithm<th><center>Accuracy
+
+				{% for d in data %}
+<tr><td>{{forloop.counter}}<td><center>{{d.algo}}<td><center>{{d.acc}}
+	
+</tr>
+				{% endfor %}
+</table>
+
+<center><br><br>
+
+	
+	<a href="{% url 'viewgraph' cat='acc_v'%}"><h2>Accuracy <i class="fa fa-bar-chart" aria-hidden="true"></i></h1></a><br>
+				</center>
+	
+
+<center><br><br>
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'base_u2.html' %}
+{% block content %} 
+
+<center>
+<h2>View Profile</h2>
+<br>
+<table id="tab" width="50%">
+<tr>
+	<th>Name</td>
+	<td>{{ data.n_a_m_e }}</td>
+</tr>
+<tr>
+	<th>Email</td>
+	<td>{{ data.e_mail }}</td>
+</tr>
+<tr>
+	<th>Phone</td>
+	<td>{{ data.phone}}</td>
+</tr>
+<tr>
+	<th>Gender</td>
+	<td>{{ data.gender }}</td>
+</tr>
+
+</tr>
+</table>
+{% endblock %}

@@ -1,0 +1,252 @@
+{% load static %}
+
+
+{% static "images" as baseUrl %}
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Socail Media Analysis with Machine Learning</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Style Blog Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="applijewelleryion/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="{% static 'css/bootstrap.css' %}" rel='stylesheet' type='text/css' />
+<!-- Custom Theme files -->
+
+<link href="{% static 'css/style.css' %}" rel='stylesheet' type='text/css' />	
+<script src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+</head>
+
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<style>
+
+  #table_wrapper{ solid olive;float:center; }
+  #tbody{height:350px;overflow-y:auto;width:600px;background:#b2b2b2;}
+  table{border-collapse:collapse; }
+  td{padding:1px 5px;
+  
+   padding-top: 12px;
+    padding-bottom: 12px;
+	padding: 8px;
+  /* pixels */
+ /* to avoid the hacks for the padding */
+} 
+  .td1{width:100px;}
+  .td2{width:140px;}
+  .td3{border-right-width:0;} /* optional */
+
+
+
+#tab {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+   
+}
+
+#tab td, #tab th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#tab tr:nth-child(even){background-color: #f2f2f2;}
+
+#tab tr:hover {background-color: #ddd;}
+
+#tab th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #FFBB05;
+    color: white;
+}
+</style>
+
+<body>
+<div class="header" id="ban">
+		<div class="container">
+
+			<div class="header_right">
+			<nav class="navbar navbar-default">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+<center>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+					<nav class="link-effect-7" id="link-effect-7">
+					<ul class="nav navbar-nav">
+						
+							<li ><a href="/u_userhome"><i class="fa fa-home" style="font-size:28px;color:orange"></i>&nbsp;Home</a></li>
+					
+								<li>
+									<a href="/u_viewfrds" ><i class='fas fa-user-friends' style='font-size:28px;color:blue'></i>&nbsp;Friends</a>
+								</li>
+								<li>
+									<a href="/u_writepost" ><i class="fa fa-pen nav_icon" style='font-size:24px;color:purple'></i>&nbsp; Post</a>
+								</li>
+								<li>
+									<a href="/u_viewwall" ><i class="fa fa-camera-retro nav_icon" style='font-size:24px;color:#990000'></i>&nbsp; Wall</a>
+								</li>
+								<li>
+									<a href="/u_ownwall" ><i class="fa fa-camera-retro nav_icon"  style='font-size:24px;color:#00ff00'></i>&nbsp;Own Wall</a>
+								</li>
+								<li>
+									<a href="/u_viewprofile" ><i class="fa fa-user nav_icon"  style='font-size:24px;color:#cc00cc'></i>&nbsp;Profile</a>
+								</li>
+
+
+						<li><a href="/u_userlogout"><i class="fa fa-power-off nav_icon"  style='font-size:24px;color:#660066'> </i>&nbsp;Logout</a></li>
+
+
+</ul></center>
+					</nav>
+				</div>
+				<!-- /.navbar-collapse -->
+			</nav>
+			</div>
+			
+			<div class="clearfix"> </div>	
+		</div>
+	</div>
+
+<div class="banner-1">
+
+</div>
+
+	<!-- technology-left -->
+	<div class="technology">
+	<div class="container">
+		<div class="col-md-9 technology-left">
+		<div class="agile-1">
+			<div class="featured-services">
+					<div class="featured-services-grids">
+
+					{% block content %}
+
+					  
+					  {% endblock %}
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+			</div>
+		</div>
+		<style>
+img {
+  border-radius: 50%;
+}
+</style>
+</head>
+		<!-- technology-right -->
+		<div class="col-md-3 technology-right">
+				
+				
+				<div class="blo-top1">
+							
+					<div class="tech-btm">
+						<div class="blog-grids">
+
+								<a href="#"><img src="{{baseUrl}}/{{data.picture}}" WIDTH="250" height="200" alt="" /></a></a>
+							</div>
+							<div class="clearfix"> </div>
+					
+						<div class="blog-grids">
+							<div class="blog-grid-left">
+
+										
+
+							
+							</div>
+					
+								
+																			<h2 class=""><span>{{data.n_a_m_e}}</span></h2>
+					
+							<div class="clearfix"> </div>
+
+						</div><hr>
+									<form method="post" action="/u_fsearch/">
+									 {% csrf_token %}
+										<h3><span>Search</span></h4>
+															
+											<input type="text" size="30"name="e_mail" required>	
+											<br>
+						
+
+
+								
+					
+
+<br><br>
+							
+					
+							
+								<a href="/u_viewfreq" >		<i class="" ></I>		<marquee><font size="" color="#ffff66"></font>&nbsp;
+								<br><strong>Friend Requests ({{fc}})</strong></span></a></marquee>
+
+
+			
+			
+
+
+				
+
+						
+									<ul class="dropdown-menu anti-dropdown-menu">
+										<li>
+											<div class="notification_header">
+											
+											</div>
+										</li>
+	
+				
+
+										<li><a href="#">
+										   <div class="user_img">
+										   
+										   </div>
+										   <div class="notification_desc">
+											</div>
+										   <div class="clearfix"></div>	
+										</a>
+										<li>
+
+
+
+						
+				
+
+							<div class="clearfix"> </div>
+						</div>
+					
+				</div>
+			
+		</div>
+		<div class="clearfix"></div>
+		<!-- technology-right -->
+	</div>
+</div>
+<div class="footer">
+		<div class="container">
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<div class="copyright wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">
+				<div class="container">
+					<p>© All rights reserved.</p>
+				</div>
+			</div>
+</body>
+</html>

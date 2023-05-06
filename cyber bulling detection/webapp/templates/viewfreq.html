@@ -1,0 +1,26 @@
+{% extends 'base_u2.html' %}
+{% block content %}  <font size="" color="#0033cc"><b>
+<h2>Requests are</h2><br><br><center>
+<table id="tab" width="50%">
+{% for d in data %}
+<tr><td><h2>{{d.fn_a_m_e}}</h2>{{d.fe_mail}}
+
+
+<table><tr><td>
+<form method="post" action="/u_viewfreq/">
+ {% csrf_token %}
+<input type="hidden" name="n_a_m_e" value="{{d.fn_a_m_e}}">
+<input type="hidden" name="e_mail"value="{{d.fe_mail}}">
+	<input type="submit" value="Accept" class="form-control">
+</form><td>
+<form method="post" action="/u_reqreject/">
+ {% csrf_token %}
+<input type="hidden" name="n_a_m_e" value="{{d.fn_a_m_e}}">
+<input type="hidden" name="e_mail"value="{{d.fe_mail}}">
+	<input type="submit" value="Reject" class="form-control">
+</form>
+</table>
+</font>
+{% endfor %}
+</table >
+{% endblock %}

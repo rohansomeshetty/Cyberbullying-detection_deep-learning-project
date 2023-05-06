@@ -1,0 +1,53 @@
+{% extends 'base_u2.html' %}
+{% block content %}
+<h4>{{msg}}</h4>
+<center>
+<h2>Share Post</h2>
+<br>
+
+<center>
+<form method="post" action="/u_writepost/">
+ {% csrf_token %}						
+<table id="tab" width="50%">
+<tr>
+	<td><h4><strong>Status</strong></h4>
+	<textarea name="msg" rows="" cols="" class="form-control"></textarea>
+	</td>
+</tr>
+<tr>
+	<td><h5><strong>Upload Image</strong></h5>
+	<input type="file" name="picture" accept="image/jpeg" />
+	
+</tr>
+
+	<tr><td>
+	
+	
+
+	<input type="submit" value="Share" class="form-control">
+
+</form>
+
+</tr>
+</table>
+<hr>
+<form method="post" action="/u_writepost2/">
+ {% csrf_token %}						
+<table id="tab" width="50%">
+<tr>
+	<td><h4><strong>Status</strong></h4>
+	<textarea name="msg" rows="" cols="" class="form-control"></textarea>
+	</td>
+</tr>
+
+	<tr><td>
+	
+	
+
+	<input type="submit" value="Share" class="form-control">
+
+</form>
+
+</tr>
+</table>
+{% endblock %}

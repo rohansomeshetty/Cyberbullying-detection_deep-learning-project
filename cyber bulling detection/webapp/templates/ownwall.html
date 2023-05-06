@@ -1,0 +1,42 @@
+{% extends 'base_u2.html' %}
+{% block content %}
+
+
+<h1>Own Wall</h2>
+</center>
+<br>
+
+
+{% for i in data %}
+
+
+<table id="tab" width="60%">
+<tr><td><h4>You  Shared
+{% if i.pstz %}
+<tr><td>
+
+<img height=300 src="{{baseUrl}}/{{i.p}}" WIDTH="550" alt="" />
+
+{% endif %}
+
+<tr><td>
+{% if i.stz2 %}
+<font size="" color="#c0c0c0">{{i.m}}</font>
+&nbsp;&nbsp; <font size="" color="red">{{i.stz1}}</font>
+
+{% endif %}
+
+{% if i.stz3 %}
+<font size="" color="blue"><strong>{{i.m}}</strong></font>
+
+{% endif %}
+
+</table><br><br>
+
+
+
+
+{% endfor %}
+
+
+{% endblock %}

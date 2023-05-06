@@ -1,0 +1,34 @@
+
+{% extends 'base_a.html' %}
+{% block content %}
+
+<h4>{{msg}}</h4><br>
+
+<h2>Training Page
+<hr>
+</h2><center>
+	<table id="tab" width="60%">
+	
+	<tr><th>Upload Datasaet 
+<tr>
+
+		<td><input type="file" class="form-control" name="file" required accept=".csv">
+		<TR><td><form method="get" action="/d1svm/">
+		<input type="submit" value="Logistic Regression " class="form-control"></td>	</form>
+		<TR><td> <form method="get" action="/d1nb/">
+		<input type="submit" value="Decision Tree" class="form-control"></td>	</form>
+		<TR><td><form method="get" action="/d1nn/"> 
+		<input type="submit" value="Random Forest" class="form-control"></td>	</form>
+		<TR><td><form method="get" action="/d1rf/"> 
+		<input type="submit" value="Neural Network" class="form-control"></td>	</form>
+		<TR><td><form method="get" action="/d1rf/"> 
+		<input type="submit" value="Convolutional Neural Network" class="form-control"></td>	</form>
+		
+		</table>
+
+<br><br>
+
+
+<br><br>
+
+{% endblock %}

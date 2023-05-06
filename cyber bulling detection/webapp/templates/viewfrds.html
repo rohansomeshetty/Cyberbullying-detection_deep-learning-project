@@ -1,0 +1,17 @@
+{% extends 'base_u2.html' %}
+{% block content %} 
+<h2>Your Friends are..</h2><br><br>
+
+<table id="tab" width="50%">
+
+
+{% for d in data %}
+
+<tr>
+<td><h2>{{d.frnd_n}}</h2>{{d.frnd_e}}<br>
+
+{% endfor %}
+
+
+</table >
+{% endblock %}
